@@ -1,0 +1,6 @@
+Started by user anonymous
+Building in workspace /Users/Shared/Jenkins/Home/workspace/SonarQube_Scanner_FreeStyle
+[SonarQube_Scanner_FreeStyle] $ /bin/sh -xe /Users/Shared/Jenkins/tmp/hudson7707159528540236329.sh
++ echo 'hello world'
+hello world
+Finished: SUCCESS

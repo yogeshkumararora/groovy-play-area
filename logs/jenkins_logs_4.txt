@@ -1,0 +1,6 @@
+Started by user anonymous
+Building in workspace /Users/Shared/Jenkins/Home/workspace/SonarQube_Scanner_FreeStyle
+[SonarQube_Scanner_FreeStyle] $ /bin/sh -xe /Users/Shared/Jenkins/tmp/hudson8002068040626783337.sh
+/Users/Shared/Jenkins/tmp/hudson8002068040626783337.sh: line 2: unexpected EOF while looking for matching `"'
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

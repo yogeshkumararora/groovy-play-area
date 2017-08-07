@@ -1,0 +1,98 @@
+Started by user anonymous
+Building in workspace /Users/Shared/Jenkins/Home/workspace/DevOps_Tooling/first_free_style
+Cloning the remote Git repository
+Cloning repository https://github.com/yogeshkumararora/experiments.git
+ > git init /Users/Shared/Jenkins/Home/workspace/DevOps_Tooling/first_free_style # timeout=10
+Fetching upstream changes from https://github.com/yogeshkumararora/experiments.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/yogeshkumararora/experiments.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin.url https://github.com/yogeshkumararora/experiments.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/yogeshkumararora/experiments.git # timeout=10
+Fetching upstream changes from https://github.com/yogeshkumararora/experiments.git
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/yogeshkumararora/experiments.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 74170d17e9b5fc8f29ca022cd6e1829242a5beb9 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 74170d17e9b5fc8f29ca022cd6e1829242a5beb9
+ > git rev-list c8806185613e98ddfb168bef5d2cb4960ace4712 # timeout=10
+Injecting SonarQube environment variables using the configuration: SonarQube-5.6.6
+using global settings config with name MyGlobalMavenSettings
+Replacing all maven server entries not found in credentials list is true
+[first_free_style] $ /Users/yogeshkumararora/mywork/apache-maven-3.2.3/bin/mvn -gs /Users/Shared/Jenkins/tmp/global-settings3878528599907267156.xml clean install sonar:sonar -Dsonar.host.url=http://localhost:9000
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building experiments 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ experiments ---
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.7.5.201505241946:prepare-agent (default-prepare-agent) @ experiments ---
+[INFO] argLine set to -javaagent:/Users/Shared/Jenkins/.m2/repository/org/jacoco/org.jacoco.agent/0.7.5.201505241946/org.jacoco.agent-0.7.5.201505241946-runtime.jar=destfile=/Users/Shared/Jenkins/Home/workspace/DevOps_Tooling/first_free_style/target/jacoco.exec
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ experiments ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ experiments ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to /Users/Shared/Jenkins/Home/workspace/DevOps_Tooling/first_free_style/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ experiments ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/Shared/Jenkins/Home/workspace/DevOps_Tooling/first_free_style/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ experiments ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/Shared/Jenkins/Home/workspace/DevOps_Tooling/first_free_style/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ experiments ---
+[INFO] Surefire report directory: /Users/Shared/Jenkins/Home/workspace/DevOps_Tooling/first_free_style/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+objc[2949]: Class JavaLaunchHelper is implemented in both /Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/bin/java (0x1091754c0) and /Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/libinstrument.dylib (0x10926e4e0). One of the two will be used. Which one is undefined.
+Running experiments.home.MessageUtilTest
+Hello World
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.263 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ experiments ---
+[INFO] Building jar: /Users/Shared/Jenkins/Home/workspace/DevOps_Tooling/first_free_style/target/experiments-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ experiments ---
+[INFO] Installing /Users/Shared/Jenkins/Home/workspace/DevOps_Tooling/first_free_style/target/experiments-0.0.1-SNAPSHOT.jar to /Users/Shared/Jenkins/.m2/repository/experiments/experiments/0.0.1-SNAPSHOT/experiments-0.0.1-SNAPSHOT.jar
+[INFO] Installing /Users/Shared/Jenkins/Home/workspace/DevOps_Tooling/first_free_style/pom.xml to /Users/Shared/Jenkins/.m2/repository/experiments/experiments/0.0.1-SNAPSHOT/experiments-0.0.1-SNAPSHOT.pom
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building experiments 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- sonar-maven-plugin:3.3.0.603:sonar (default-cli) @ experiments ---
+[INFO] User cache: /Users/Shared/Jenkins/.sonar/cache
+[ERROR] SonarQube server [http://localhost:9000] can not be reached
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 6.974 s
+[INFO] Finished at: 2017-08-06T18:10:43+05:30
+[INFO] Final Memory: 23M/177M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.sonarsource.scanner.maven:sonar-maven-plugin:3.3.0.603:sonar (default-cli) on project experiments: Unable to execute SonarQube: Fail to get bootstrap index from server: Failed to connect to localhost/0:0:0:0:0:0:0:1:9000: Connection refused -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+Build step 'Invoke top-level Maven targets' marked build as failure
+Finished: FAILURE

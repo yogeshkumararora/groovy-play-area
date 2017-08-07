@@ -1,0 +1,7 @@
+Started by user anonymous
+Building in workspace /Users/Shared/Jenkins/Home/workspace/DevOps_Tooling/shell_practice_freestyle_job
+[shell_practice_freestyle_job] $ /bin/sh -xe /Users/Shared/Jenkins/tmp/hudson6276335430301028313.sh
++ sh 'curl -s -o /dev/null -w "%{http_code}" https://go.cloudbees.com'
+sh: curl -s -o /dev/null -w "%{http_code}" https://go.cloudbees.com: No such file or directory
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

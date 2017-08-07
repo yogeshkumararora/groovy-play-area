@@ -1,0 +1,9 @@
+{
+  "brand":"Suzuki",
+  "model":2008,
+  "transmission":
+    { "gears":5 }
+  ,
+  "releaseYear":2008,
+  "fuel": "PETROL"
+}
