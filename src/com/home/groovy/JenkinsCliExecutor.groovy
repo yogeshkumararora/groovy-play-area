@@ -1,4 +1,5 @@
 @Grab( 'commons-lang:commons-lang:2.6' )
+import org.apache.commons.lang.StringUtils
 import org.codehaus.groovy.runtime.ProcessGroovyMethods
 
 def invokeJenkinsCli(def jenkinsUrls, def operation, def job, def buildParam) {
